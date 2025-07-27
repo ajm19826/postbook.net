@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet Rock</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        #info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: #333;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">Click on the rock to interact with it!</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, rock;
+        let rockMaterial, clock;
+        let raycaster, mouse;
+        
+        // Initialize the 3D scene
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            // Add lighting
+            const ambientLight = new THREE.AmbientLight(0x404040, 1); // Soft white light
+            scene.add(ambientLight);
+
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(5, 5, 5).normalize();
+            scene.add(directionalLight);
+
+            // Create an elliptical rock shape (oval-like)
+            const geometry = new THREE.SphereGeometry(1, 32, 32);
+            geometry.scale(1.5, 1, 1); // Make it oval-like
+            rockMaterial = new THREE.MeshLambertMaterial({ color: 0x9E9E9E });
+            rock = new THREE.Mesh(geometry, rockMaterial);
+            scene.add(rock);
+
+            // Position the camera
+            camera.position.z = 5;
+
+            clock = new THREE.Clock();
+            raycaster = new THREE.Raycaster();
+            mouse = new THREE.Vector2();
+
+            animate();
+        }
+
+        // Render the scene and update animation
+        function animate() {
+            requestAnimationFrame(animate);
+            rock.rotation.x += 0.01;
+            rock.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+
+        // Add interactivity by clicking on the rock
+        window.addEventListener('click', onClick, false);
+
+        function onClick(event) {
+            // Normalize mouse position
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            // Update the raycaster with the camera and mouse position
+            raycaster.updateMatrixWorld();
+            raycaster.setFromCamera(mouse, camera);
+
+            // Check for intersections
+            const intersects = raycaster.intersectObject(rock);
+
+            // Debugging the intersects and ray
+            console.log(intersects); // This will print the intersects array to the console
+            if (intersects.length > 0) {
+                console.log("Rock clicked! Changing color...");
+
+                // Change the color of the rock when clicked
+                const randomColor = Math.floor(Math.random() * 16777215);
+                rockMaterial.color.setHex(randomColor); // This should change the rock's color
+            } else {
+                console.log("Click missed the rock.");
+            }
+        }
+
+        // Initialize the scene
+        init();
+    </script>
+</body>
+</html>

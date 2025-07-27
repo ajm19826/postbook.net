@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .joke {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Random Joke Generator</h1>
+    <button onclick="generateJoke()">Get a Joke</button>
+    <div id="joke" class="joke"></div>
+</div>
+
+<script>
+    const jokes = [
+        "Why don’t skeletons fight each other? They don’t have the guts.",
+        "Why don’t programmers like nature? It has too many bugs.",
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+        "Why was the math book sad? Because it had too many problems."
+    ];
+
+    function generateJoke() {
+        const randomIndex = Math.floor(Math.random() * jokes.length);
+        const joke = jokes[randomIndex];
+        document.getElementById("joke").textContent = joke;
+    }
+</script>
+
+</body>
+</html>

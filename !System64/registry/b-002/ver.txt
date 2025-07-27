@@ -1,0 +1,7 @@
+>01
+(
+selKey(01 , 2 , 3 , 4)
+%data%
+
+selkey(ApplicationRun(%modify% ==> [/.//main/!System64/registry/DULL_1_BIT.regf]))
+)

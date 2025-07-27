@@ -1,0 +1,12 @@
+  <!--COPYRIGHT ©1995 - ~~ POSTBOOK INC POSTBOOK FILES //
+    NONE OF THESE FILES CAN BE COPIED OR STOLEN.
+    PLEASE READ THE TERMS OF CONDITIONS FOR MORE INFO
+    https://postbook.net/terms-of-conditions.html
+    OR EMAIL / TEXT postbook@postbook.net /// +1 732 400 8080 (888 400 8080 toll free)
+    -->
+
+    **new Serverscript class
+    #run# {
+new frameInstance and = 0
+    }
+    #endif(0)#

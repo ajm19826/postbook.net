@@ -1,0 +1,12 @@
+d!start document {
+script --{
+tbdocpublic()
+localmaingroup("defaultusers", index=3, col=17)
+mainScriptAccounts --added(
+account1("pwsLocalAdmin",userinfo: id:B2167);
+B2167= --(userGroups=DESKTOP-ADMIN, userAddons=id:63918-default-apps; id:964246467775B-0, encrypt=showable, runtimePSWD:#--%BTN-BTN-SIGNIN%--%, end)
+account2("backupAccount",userinfo: id:B3167);
+B3167= --(userGroups=DESKTOP-ADMIN, userAddons=id:63918-default-apps; id:964246467775B-0, encrypt=logs-hidden, runtimePSWD:#--%BTN-BTN-SIGNIN%--%, end)
+)
+}
+}

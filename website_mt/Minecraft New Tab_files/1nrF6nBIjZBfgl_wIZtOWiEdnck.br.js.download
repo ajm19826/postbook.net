@@ -1,0 +1,1 @@
+var TopSitesClassModule;(function(n){var i=function(){function n(n,t,i,r,u){u===void 0&&(u="");this.Title=n;this.Url=t;this.DefaultImageUrl=i;this.IsCustom=r;this.CustomColor=u}return n}(),t;n.TopSite=i;t=function(){function n(n){this.Data=n}return n}();n.TopSites=t})(TopSitesClassModule||(TopSitesClassModule={}))

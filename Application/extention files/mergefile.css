@@ -1,0 +1,152 @@
+#backgroundhangouts{
+    background-repeat: no-repeat;
+    background-image: url("hangouts-background/hangouts-01.png");
+
+  }
+  
+  #sidemg{
+    float:left;
+
+  }
+  html{
+    font-family: 'Roboto', sans-serif;
+  }
+  .contactlist{
+width:422px;
+height:900px;
+background-color: aliceblue;
+padding: 0.32cm;
+  }
+  .contact{
+    width: 390px;
+    height: 90px;
+    background-color: bisque;
+    border-color: black;
+    border:4px;
+color:black;
+  }
+  .contact:hover{
+    width: 390px;
+    height: 90px;
+    background-color: rgb(231, 195, 151);
+    border-color: black;
+    border:4px;
+color:black;
+font-style: italic;
+  }
+
+  #newcontact{
+    width: 390px;
+    height: 40px;
+    background-color: rgb(219, 226, 178);
+    border-color: black;
+    border:4px;
+    color:black;
+  }
+  #newcontact:hover{
+    width: 390px;
+    height: 40px;
+    background-color: rgb(189, 196, 151);
+    border-color: black;
+    border:4px;
+    color:black;
+    font-style: italic;
+  }
+  #number:hover{
+font-style:italic;
+  }
+  /*KEYPAD*/
+  .container {
+    text-align: center;
+    float:right;
+}
+#display {
+    width: 250px;
+    padding: 15px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+}
+
+.key {
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.key:active {
+    background-color: #0056b3;
+}
+
+
+.keypad button:nth-child(10) {
+    grid-column: 1 / 3;
+}
+
+.keypad button:nth-child(11) {
+    grid-column: 3 / 4;
+}
+.callkey {
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    background-color: #3ec01e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.callkey:active {
+    background-color: #38a112;
+}
+/*Popup*/
+/* Style for the popup container */
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #888;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the popup header */
+.popup-header {
+    padding: 10px;
+    background-color: #5c6bc0;
+    color: white;
+    cursor: move;
+}
+
+/* Style for the close button */
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style for the popup body */
+.popup-body {
+    padding: 15px;
+    text-align: center;
+}

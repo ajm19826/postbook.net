@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .palette {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .color-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .color-code {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Color Palette Generator</h1>
+        <div class="palette" id="palette">
+            <!-- Color boxes will appear here -->
+        </div>
+        <button id="generate-button">Generate Palette</button>
+    </div>
+
+    <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to create a color palette
+        function generatePalette() {
+            const paletteContainer = document.getElementById('palette');
+            paletteContainer.innerHTML = ''; // Clear existing palette
+
+            // Generate 5 random colors and display them
+            for (let i = 0; i < 5; i++) {
+                const color = getRandomColor();
+
+                const colorBox = document.createElement('div');
+                colorBox.classList.add('color-box');
+                colorBox.style.backgroundColor = color;
+                colorBox.addEventListener('click', () => copyToClipboard(color));
+
+                const colorCode = document.createElement('p');
+                colorCode.classList.add('color-code');
+                colorCode.textContent = color;
+
+                const colorWrapper = document.createElement('div');
+                colorWrapper.appendChild(colorBox);
+                colorWrapper.appendChild(colorCode);
+
+                paletteContainer.appendChild(colorWrapper);
+            }
+        }
+
+        // Function to copy the color code to the clipboard
+        function copyToClipboard(color) {
+            navigator.clipboard.writeText(color).then(() => {
+                alert(`Color ${color} copied to clipboard!`);
+            });
+        }
+
+        // Event listener for the Generate Palette button
+        document.getElementById('generate-button').addEventListener('click', generatePalette);
+
+        // Initial palette generation
+        generatePalette();
+    </script>
+
+</body>
+</html>

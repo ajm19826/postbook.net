@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Game</h1>
+        <div id="question-container">
+            <p id="question">Loading question...</p>
+            <ul id="answers">
+                <li><button class="answer-button" data-answer="0">Answer 1</button></li>
+                <li><button class="answer-button" data-answer="1">Answer 2</button></li>
+                <li><button class="answer-button" data-answer="2">Answer 3</button></li>
+                <li><button class="answer-button" data-answer="3">Answer 4</button></li>
+            </ul>
+        </div>
+        <div id="result-container" class="hidden">
+            <h2>Your Score: <span id="score">0</span></h2>
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.answer-button {
+    background-color: #3498db;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+.answer-button:hover {
+    background-color: #2980b9;
+}
+
+.hidden {
+    display: none;
+}
+
+#restart-button {
+    margin-top: 20px;
+}
+
+</style>
+<script>
+    const quizData = [
+    {
+        question: "What is the capital of France?",
+        answers: ["Berlin", "Madrid", "Paris", "Rome"],
+        correctAnswer: 2
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        answers: ["Earth", "Mars", "Jupiter", "Venus"],
+        correctAnswer: 1
+    },
+    {
+        question: "Who wrote 'Romeo and Juliet'?",
+        answers: ["Charles Dickens", "Jane Austen", "William Shakespeare", "Mark Twain"],
+        correctAnswer: 2
+    },
+    {
+        question: "What is the largest ocean on Earth?",
+        answers: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        correctAnswer: 3
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function loadQuestion() {
+    const currentQuestion = quizData[currentQuestionIndex];
+    document.getElementById("question").textContent = currentQuestion.question;
+
+    const answersList = document.getElementById("answers");
+    answersList.innerHTML = "";
+    currentQuestion.answers.forEach((answer, index) => {
+        const answerButton = document.createElement("button");
+        answerButton.textContent = answer;
+        answerButton.classList.add("answer-button");
+        answerButton.setAttribute("data-answer", index);
+        answerButton.onclick = checkAnswer;
+        const listItem = document.createElement("li");
+        listItem.appendChild(answerButton);
+        answersList.appendChild(listItem);
+    });
+}
+
+function checkAnswer(event) {
+    const userAnswer = parseInt(event.target.getAttribute("data-answer"));
+    const correctAnswer = quizData[currentQuestionIndex].correctAnswer;
+    
+    if (userAnswer === correctAnswer) {
+        score++;
+    }
+    
+    currentQuestionIndex++;
+    
+    if (currentQuestionIndex < quizData.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    document.getElementById("question-container").classList.add("hidden");
+    const resultContainer = document.getElementById("result-container");
+    resultContainer.classList.remove("hidden");
+    document.getElementById("score").textContent = score;
+}
+
+document.getElementById("restart-button").onclick = function() {
+    score = 0;
+    currentQuestionIndex = 0;
+    loadQuestion();
+    document.getElementById("result-container").classList.add("hidden");
+    document.getElementById("question-container").classList.remove("hidden");
+};
+
+// Initialize quiz
+loadQuestion();
+
+</script>
+</body>
+</html>

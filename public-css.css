@@ -1,0 +1,193 @@
+/*FORMAT - PostBook*/
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
+    color:black;
+}
+.sidebar{
+    width: 500px;
+    height: 1000px;
+    background-color: grey;
+    border: rgba(44, 41, 41, 0.795);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+left: 0px;
+padding: 10px;
+}
+.sidebar-txt{
+    height: 75px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: rgba(48, 44, 44, 0.212);
+    left: 0px;
+padding: 10px;
+}
+.uname-bar.sidebar{
+left: 5px;
+font-weight: 705;
+
+}
+.login-checkbox {
+accent-color: rebeccapurple;
+border: rgba(102, 51, 153, 0.726);
+background-color: cadetblue;
+}
+html{
+background-color: lightgrey;
+}
+#accountimg{
+left: 0;
+width: 15;
+height: 10;
+background-image: url(https://scontent-lga3-.xx.fbcdn.net/v/t1.6435-9/122873245_117285673506874_8323306263802202818_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=m7UtIftQCqwAX-fky0Q&_nc_ht=scontent-lga3-1.xx&oh=00_AT-GArfiLabLmOWaAPvWZ5c3HAm_FQ4N5MfzUqQEwFPwsg&oe=627E3D35);
+}
+/*POST*/
+.post-section{
+/*
+Post section defins the area of *WHERE the post will be.
+image-section defines if there is a big image.
+*/
+width: 500px;
+height: 530px;
+background-color: dimgray;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: black;
+font-weight: 400;
+border-radius: 20px;
+border: gray;
+}
+.img{
+border-radius: 5px;
+alt: "Image";
+background-image: url(imgdeleted.png);
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+width: 100%;
+height: 2.50cm;
+background-repeat: no-repeat;
+}
+.video{
+border-radius: 10px;
+width: 150cm;
+height: 100cm;
+}
+.uname-label{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+}
+.text{
+border: dimgrey;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.reply-section{
+border: black;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.label-reply-section{
+background-color: goldenrod;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+width: 55px;
+}
+.iframe{
+border: 0.25cm;
+border-color:rgb(46, 43, 43);
+border-radius: 1cm;
+width: 10cm;
+height:5.95cm;
+}
+.button-new{
+    width: fit-content;
+    height: 68px;
+    border-radius: 15px;
+    background-color: rgb(18, 18, 233);
+    border: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+   text-decoration: none;
+
+}
+.button-new:hover{
+    width: fit-content;
+    height: 68px;
+    border-radius: 15px;
+    background-color: rgb(36, 36, 105);
+    border: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+   text-decoration: none;
+
+}
+.button-new{
+    width: fit-content;
+    height: 68px;
+    border-radius: 15px;
+    background-color: rgb(36, 36, 105);
+    border: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+   text-decoration: none;
+
+}
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .fa:hover {
+    color: darkblue;
+  }
+  hashtag{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+  }
+  hashtag:hover{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: darkblue;
+    cursor: pointer;
+  }
+  .menu-head-bar{
+    height: 250px;
+    width: 1535px;
+    background-color: rgba(211, 211, 211, 0.137);
+    border: gray;
+    padding: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ /* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  #end{
+    color:grey;
+    font-family:sans-serif;
+    text-align: center;
+  }
+  .m1111{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  @font-face {
+    font-family: consolas;
+    src: url("file:///D:\Desktop - Alex\PostBook - Social Media\CONSOLAS.ttf");
+  }

@@ -1,0 +1,18 @@
+/*
+POSTBOOK 2012 MOBILE SETTINGS
+*/
+!document runtime 1 {
+    scr.connect.id("2261847553327566513", [name="CLIENT_ID_HERE"]) /*CLIENT ID*/
+
+/*Configure Touch Screen*/
+%supportdev% [
+pixl(12,24,16,50,98)
+if ts == pixel {
+    !document clone (ts, pixl)
+}
+]
+!document lib 0 (lib=pixl) [
+    ts.getDefineByURL("https://admin.postbook.net/metdata/wtmobile/mbtn-btn.reg16")
+    dock.ts(pixl.ts.click("https://admin.postbook.net/metdata/wtmobile/click-btn-mbtn.regDWORD32"))
+]
+}

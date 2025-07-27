@@ -1,0 +1,6 @@
+!include "perms" => [flags]
+
+flags() {
+("modify-reg":"true","dir":"true","rexliy":"false" [admin])
+("modify-reg":"true","dir":"true","rexliy":"unactive" [pws-secuser {DEFAULT}-])
+}

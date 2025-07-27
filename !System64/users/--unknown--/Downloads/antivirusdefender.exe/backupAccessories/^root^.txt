@@ -1,0 +1,3 @@
+ROOTFOLDER: {
+%root-temp%/Windows/System32/avyfid/antivirusdefender%^.exe^%/backupAccessories/explorerBackup
+}

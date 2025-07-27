@@ -1,0 +1,14 @@
+.document(applet)
+f applet([]){
+scripts:void;
+};
+
+f pwssl([lib:network-http-processer]:"https://pw.xyz/lib/pws/ntaut.cb", pwss(Loop)){args:0; cache(f Loop(): void, location.frame.load(x);)})
+net const.pwssl:"PWSVMNETWORK", name();
+const name:net pwssl;
+if net.pwssl() ==> inactive{
+re applet() == {void}
+document.createElement("warn", text="Cant Connect to PostBook, Please try again later"%para%, "Aborted.", style.text.size=default)
+}
+net cr:"pw.xyz/lib/pws/net/network.cb";
+document end()

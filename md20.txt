@@ -1,0 +1,40 @@
+@media runtime {
+"name":"PostBook"
+"connection":"1b3A25b391-x33Ba2014" //Indicates how to connect the ids to postbook.
+
+};
+@media justify(voice) {
+   write(pitch);
+    define pitch {
+        pitch = audio.doc.nam (ptc 0, 21b 405, (4%2) sd:25): (sd.breakup:(385, #201) btc:ping.specify(pg://204103920)) 
+        label pitch = "Your Bro MS - PostBook"
+        deb pitch = do Namespase:pitch (arc:200 db.sound.vol:(242*19.3183768393727912863 modify));
+
+    }
+}
+debname(pitch) { //narrate effects
+    "$vd1":"Welcome to PostBook!" next
+    "$vd2":"Press" + numbkey() + "to" + %id_% " next
+        "$vd3":"Opening" + %function% next
+            "$vd4":"Loading Game" + &scope(); next
+                "$vd5":"You do not have the rank required to do this!" next
+                    "$vd6":"Connecting to staff" + &staff(); next
+                    "$vd7": %&user + "is trying to call you." + %btn_call_accept; + %btn_call_deny; next   
+                      "$vd8":+requestUser(&usercall:deny) + "denied the call, Try again later" next
+"$vd9":+requestUser(&usercall:accept) + "accepted the call" + &calltake; next
+"$vd10":"You have been banned from this game. Ban last:" + &gameban; next
+"$vd11":"Skipping intro..." next $vd12
+"$vd12":"Welcome to postbook! it is currently" + $date next
+"$vd13.titlename:def.egg":"Stop asking" next
+"$vd14":"You are" + &id__; next
+"$vd15":"Checking..." + #time.ms(3000) + &devicename:ask.pwcompatible(set var "devicename" = :ask.pwcompatble:) next 
+
+
+
+
+}
+define scope {
+func game {
+set game = "http://10.5.18.2/authserver"
+}
+}

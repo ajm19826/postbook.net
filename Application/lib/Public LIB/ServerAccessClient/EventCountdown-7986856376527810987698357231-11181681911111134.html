@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .event-name {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Event Countdown</h2>
+    <label for="event-name">Event Name:</label>
+    <input type="text" id="event-name" placeholder="Enter event name">
+    
+    <label for="event-date">Event Date:</label>
+    <input type="datetime-local" id="event-date">
+    
+    <button onclick="startCountdown()">Start Countdown</button>
+    
+    <div class="event-name" id="event-name-display"></div>
+    <div class="time" id="countdown"></div>
+</div>
+
+<script>
+    let countdownInterval;
+
+    function startCountdown() {
+        const eventName = document.getElementById("event-name").value || "Unnamed Event";
+        const eventDate = document.getElementById("event-date").value;
+        
+        if (!eventDate) {
+            alert("Please select an event date!");
+            return;
+        }
+
+        // Display the event name
+        document.getElementById("event-name-display").textContent = eventName;
+
+        const eventTime = new Date(eventDate).getTime();
+        
+        // Clear any existing countdown
+        clearInterval(countdownInterval);
+
+        countdownInterval = setInterval(function() {
+            const currentTime = new Date().getTime();
+            const timeRemaining = eventTime - currentTime;
+
+            // Time calculations
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("countdown").textContent = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // If the countdown finishes
+            if (timeRemaining < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").textContent = "Event Started!";
+            }
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>

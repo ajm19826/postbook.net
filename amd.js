@@ -1,0 +1,4 @@
+function amd1(){
+    //Disabled. change "documente" to "document"
+    documente.wsrite("<!doctype html><html><title>Ą̵̨̛̘̜͕̠̝͉͎̜̥̣̦̲̠̞͙̰͖̰̭͑͋͒ ̵̨̢̡͙͍͖͈̗̻̭̗͎͙̩͎̥̳̜̦̘͕̮͈̠̲̙̝̀͑́̓̒͂̒̈́̅̅̆̎̏̃͒̂̓̃̚͜͜͝B̶̡̨̡̢͇̼̬̩̭͇̭̝̦̤͙̖̺̞̣̹͉̥̭̻̲̳̼̃̈̑͛̾́͋̅̌̈́̒̽̀̄̑̓̌͑́͗̊̈́̎̀̃͘̕͜͜͝ͅA̸̢̢̛͈̲̖̱͍̪̗͉̗̖̞̹̤͎̾̾͛̄̽̓͋̀͒̅̀͋̎̀̀͝ͅͅͅK̷̢͖̝̲̲̖̗̲̺͇̞̼̞̞͎̏͌̿́̋̽͂̏̽̌̏́̓͂̇̃͋̀̂̕͠A̷̧̧̢̡̡̧̛̛̛̛͎̱͖͚̖͙͈̩̻̪̟̖͇̳̱̻͇̤͇̥̯̥̘͇̻̱̣͇̤̅̓̀̉́͑̅̆̔̇̑̎̒̓̒̌͂̃̈̅́̍̈̕̕̕͘͘͝</title><link rel=icon href=https://227263-694567-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2020/12/Among-Us-Red-Crewmate.png><head><h1>PostBook</h1></head><body><imgb></img></body><style>imgb{background-image:url(amd-2001.png); width:250; height:250;}</style><footer><a href=https://www.youtube.com/watch?v=iik25wqIuFo>https://postbook.net#</a></footer></html>")
+}function old(){window.open("postbook.htm")}

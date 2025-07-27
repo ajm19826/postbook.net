@@ -1,0 +1,22 @@
+square{
+width: 50px;
+height: 50px;
+background-color: darkgray;
+color: white;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 45px;
+    background-color: darkgray;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+triangle{
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
+}

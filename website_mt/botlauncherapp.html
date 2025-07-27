@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <center style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <b>BOT &#183; <i>PostBook</i></b>
+    </center>
+</head>
+<body>
+    <link href="console.css">
+    <center>
+<div id="console" title="CONSOLE" spellcheck="false" contenteditable="true">
+[MESSAGE] Console can be edited.
+[POSTBOOK &#129302; (BOT)] Website loaded.
+[@] Bot loaded.
+[@] Do command "+public" to make the bot public. On ios or more, from an eazier way of
+doing this, do "https://postbook.net/publish?id=(YOUR BOT KEY)"
+[R] Now loading...
+
+Copyright PostBook Software 2005
+All rights reserved
+BOTKEY: AT__GArfiLabLmOWaAPvWZ5c3HAm_FQ4N5MfzUqQEwFPwsg
+<br>
+<br>
+<input id="inp" type="text" value="" placeholder="Enter a command"> <input id="butto" type="button" value="Submit" class="submit">
+</div>
+<br>
+<style>
+input[type=text]{
+    background-color: black;
+    color: white;
+}
+.submit{
+    border:5px;
+    border-color:white;
+    font-family: consolas;
+    background-color: black;
+    color:white;
+    }
+</style> <button onclick="instructions()">Help</button><br> <br>
+
+<script>
+    var content = $('#msg500').text();
+    $('#msg500').wrapInner('<textarea>' + content + '</textarea>');
+</script>
+</center>
+<h1>What the <i>Bot</i> seas:</h1>
+<center>
+    <canvas id="main" width="300" height="500">    
+    </canvas>
+    <br>
+    <canvas id="myCanvas" style="border:2px solid green;" width="300" height="300"></canvas>
+      <script>
+         var canvas = document.getElementById('myCanvas');
+         var ctx = canvas.getContext('2d');
+         var data = '<svg xmlns="http://www.w3.org/2000/svg" width="300"
+         height="200">' +
+            '<foreignObject width="100%" height="100%">' +
+               '<div xmlns="http://www.w3.org/1999/xhtml" style="font-size:50px">' +
+                  'Simply Easy ' +
+                  '<span style="color:blue;">' +
+                  'Learning</span>' +
+               '</div>' +
+            '</foreignObject>' +
+         '</svg>';
+    
+         var DOMURL = window.URL || window.webkitURL || window;
+         var img1 = new Image();
+         var svg = new Blob([data], {type: 'image/svg+xml'});
+         var url = DOMURL.createObjectURL(svg);
+         img1.onload = function() {
+            ctx.drawImage(img1, 25, 70);
+            DOMURL.revokeObjectURL(url);
+         }
+         img1.src = url;
+        NORESPOND
+      </script>
+    <br>
+    <input type="button" id="doen" value="SAVE SIGHT">
+    </center>
+    
+
+</body>
+<script>
+    
+    </script>
+<script>
+    var colors = ["black","orange","yellow","green","blue","indigo","violet","brown","white","red","grey","pink"];
+
+// Get the input field
+var inputVal = document.getElementById("inp");
+
+// Execute a function when the user releases a key on the keyboard
+inputVal.addEventListener("keyup", function(event) {
+// Number 13 is the "Enter" key on the keyboard
+if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("butto").click();
+}
+});
+
+function start(){
+    for(var x = 0; x<300; x+=10){
+        for(var y = 0; y<500; y+=10){
+            drawIt(x, y);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('butto');
+    // onClick's logic below:
+    link.addEventListener('click', function() {
+        start();
+    });
+});
+
+
+
+function saveImage() {
+            var ua = window.navigator.userAgent;
+
+            if (ua.indexOf("Chrome") > 0) {
+                var canvas = document.getElementById("main");
+                var name = document.getElementById("inp");
+                // save image as png
+                var link = document.createElement('a');
+                link.download = name.value+".png";
+                link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
+                link.click();
+            }
+            else {
+                alert("Please use Chrome");
+            }
+        }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var doen = document.getElementById('doen');
+    // onClick's logic below:
+    doen.addEventListener('click', function() {
+        saveImage();
+    });
+});
+function rando(salt_x, salt_y){
+    var randy = 0;
+    var inp = document.getElementById("inp");
+    var seed = inp.value;
+    for(var x = 0; x < seed.length; x++){
+        if(x == 0){
+            randy += seed.charCodeAt(x)*salt_y;
+        }
+         
+        else{
+            randy = randy * (seed.charCodeAt(x)+salt_x);
+        } 
+    
+    }
+    return (randy*(salt_x*salt_y))%26;
+};
+
+function drawIt(x, y){
+
+var c = document.getElementById("main");
+var con = c.getContext("2d");
+
+con.beginPath();
+con.rect(x, y, 10, 10);  
+con.fillStyle = colors[(rando((x+1), (y+1))%12)];
+con.fill();
+};
+function instructions(){
+alert("COMMAND 1: $$rel.post(<image> image=IMAGE_SRC; txt=YOUR_TEXT '{n}')" + "\n" + "NEXT_LINE_TXT;");
+}
+</script>
+<style>
+    html {
+        background-color: rgba(36, 33, 33, 0.808);
+        color: white;
+    }
+    #header{
+        font-weight:700;
+    }
+    /*Roles*/
+    role.admin{
+        color: green;
+    }
+    role.none{
+        color: yellowgreen;
+    }
+    role.poster{
+        color: rgba(255, 0, 0, 0.815);
+    }
+    /*BOT CONSOLE*/
+#console{
+background-color: black;
+font-family: consolas;
+color: white;
+font-size: 0.45cm;
+width: 25cm;
+height: 10.50cm;
+}
+@font-face{
+    font-family: consolas;
+    src:  url("file:///D:\Desktop - Alex\PostBook - Social Media\CONSOLAS.TTF");
+}
+    /*
+    selectIMG{
+        background-image: url("D:\Desktop - Alex\PostBook - Social Media\Home\posts\admin.alexm");
+        width: 1cm;
+        height: 1cm;
+        border-radius: 0.45cm;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    */
+</style>
+<script>
+    TITLE = "PostBook: Bots";
+    document.title = TITLE;
+
+</script>
+<footer>
+    <p>ROLES: <role class="admin">Admin,</role> <role class="poster">Poster</role></p>
+</footer>
+</html>

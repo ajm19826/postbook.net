@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Recipe Book</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .book-container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .recipe {
+            display: none;
+            text-align: center;
+        }
+
+        .recipe.active {
+            display: block;
+        }
+
+        .recipe img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .recipe h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .recipe ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recipe ul li {
+            font-size: 1rem;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container" id="book-container">
+        <!-- Recipes will be dynamically added here -->
+    </div>
+    <div class="controls">
+        <button id="prev">Back</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script>
+        const recipes = [
+            { title: "Spaghetti Bolognese", image: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Spaghetti_Bolognese.jpg", ingredients: ["Spaghetti", "Ground Beef", "Tomato Sauce", "Garlic", "Onion"] },
+            { title: "Pancakes", image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Fluffy_American_Pancakes.jpg", ingredients: ["Flour", "Milk", "Eggs", "Butter", "Sugar"] },
+            { title: "Caesar Salad", image: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Caesar_salad_%281%29.jpg", ingredients: ["Lettuce", "Croutons", "Parmesan Cheese", "Caesar Dressing"] },
+            { title: "Chicken Curry", image: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Indian_Chicken_Curry.jpg", ingredients: ["Chicken", "Coconut Milk", "Curry Powder", "Garlic", "Onion"] },
+            { title: "Vegetable Stir Fry", image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Stir_fry.jpg", ingredients: ["Broccoli", "Carrots", "Soy Sauce", "Garlic", "Bell Peppers"] },
+            { title: "Soup", image: "https://upload.wikimedia.org/wikipedia/commons/5/50/Vegetable_soup.jpg", ingredients: ["Stock", "Carrots", "Celery", "Onion", "Garlic"] },
+            { title: "Brownies", image: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Brownies_%2812317646083%29.jpg", ingredients: ["Chocolate", "Sugar", "Flour", "Eggs", "Butter"] },
+        ];
+
+        const bookContainer = document.getElementById("book-container");
+        const prevButton = document.getElementById("prev");
+        const nextButton = document.getElementById("next");
+        let currentPage = 0;
+
+        // Create recipe elements
+        recipes.forEach((recipe, index) => {
+            const recipeDiv = document.createElement("div");
+            recipeDiv.classList.add("recipe");
+            if (index === 0) recipeDiv.classList.add("active"); // Show the first recipe
+            recipeDiv.innerHTML = `
+                <h2>${recipe.title}</h2>
+                <img src="${recipe.image}" alt="${recipe.title}">
+                <ul>
+                    ${recipe.ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
+                </ul>
+            `;
+            bookContainer.appendChild(recipeDiv);
+        });
+
+        const updatePage = () => {
+            const allRecipes = document.querySelectorAll(".recipe");
+            allRecipes.forEach((recipe, index) => {
+                recipe.classList.toggle("active", index === currentPage);
+            });
+        };
+
+        prevButton.addEventListener("click", () => {
+            if (currentPage > 0) {
+                currentPage--;
+                updatePage();
+            }
+        });
+
+        nextButton.addEventListener("click", () => {
+            if (currentPage < recipes.length - 1) {
+                currentPage++;
+                updatePage();
+            }
+        });
+    </script>
+</body>
+</html>

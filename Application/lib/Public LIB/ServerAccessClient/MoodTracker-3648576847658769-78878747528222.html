@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .mood-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .mood-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .mood-button.happy {
+            background-color: #ffeb3b;
+        }
+
+        .mood-button.sad {
+            background-color: #2196f3;
+        }
+
+        .mood-button.angry {
+            background-color: #f44336;
+        }
+
+        .mood-button.neutral {
+            background-color: #9e9e9e;
+        }
+
+        .mood-button:hover {
+            opacity: 0.8;
+        }
+
+        .mood-log {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .log-entry {
+            background-color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .log-entry span {
+            font-weight: bold;
+        }
+
+        .log-entry p {
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Tracker</h1>
+
+    <div class="mood-container">
+        <button class="mood-button happy" data-mood="Happy">Happy</button>
+        <button class="mood-button sad" data-mood="Sad">Sad</button>
+        <button class="mood-button angry" data-mood="Angry">Angry</button>
+        <button class="mood-button neutral" data-mood="Neutral">Neutral</button>
+    </div>
+
+    <div class="mood-log" id="moodLog">
+        <!-- Mood log entries will appear here -->
+    </div>
+
+    <script>
+        const moodButtons = document.querySelectorAll(".mood-button");
+        const moodLog = document.getElementById("moodLog");
+
+        // Store mood log entries
+        let moodEntries = [];
+
+        // Function to format the date
+        const formatDate = (date) => {
+            return date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+            });
+        };
+
+        // Function to render the mood log
+        const renderLog = () => {
+            moodLog.innerHTML = ""; // Clear previous logs
+            moodEntries.forEach(entry => {
+                const entryDiv = document.createElement("div");
+                entryDiv.classList.add("log-entry");
+
+                entryDiv.innerHTML = `
+                    <span>${entry.mood}</span> on ${entry.date}
+                    <p>${entry.note ? `Note: ${entry.note}` : ""}</p>
+                `;
+
+                moodLog.appendChild(entryDiv);
+            });
+        };
+
+        // Add event listener to mood buttons
+        moodButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const mood = button.getAttribute("data-mood");
+                const date = new Date();
+                const formattedDate = formatDate(date);
+
+                const note = prompt("Would you like to add a note?");
+
+                // Add the new mood entry
+                moodEntries.unshift({ mood, date: formattedDate, note });
+
+                // Re-render the log
+                renderLog();
+            });
+        });
+
+        // Initial render of the log (if there are any stored entries)
+        renderLog();
+    </script>
+</body>
+</html>

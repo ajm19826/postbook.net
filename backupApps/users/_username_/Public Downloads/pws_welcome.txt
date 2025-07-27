@@ -1,0 +1,4 @@
+Welcome to PostBook!
+
+===========================
+Test document "LASTMODIFIED: 6/12/1998"

@@ -1,0 +1,16 @@
+!start $suffix {
+// Modify below here
+
+> prefix ("user_account":"%username%");
+wrap[""]
+> prefix ("user_pwsd":"PWS");
+wrap[""]
+> prefix ("user_profilelink":"fileloc:[/.//users/'%username%/pfp/%pfpid-col%.png']");
+wrap[""]
+> prefix ("user_desktop-color":"default");
+wrap[""]
+> prefix ("user_background":"switch('/.//main')");
+wrap[""]
+> prefix ("user_taskbar-size":"normal");
+https://upload.wikimedia.org/wikipedia/en/9/97/Registry_Editor_icon.png
+}

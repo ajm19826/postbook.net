@@ -1,0 +1,5 @@
+document()
+install file["premium.html"];
+sect=1121, a
+fill= W:fit,H:fit;
+document end()

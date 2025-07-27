@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangouts Video Call</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        video {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+        .fullsize{
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <video class="fullsize" id="camera" autoplay playsinline></video>
+
+    <script>
+        // Access the user's camera and display the video feed
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const videoElement = document.getElementById('camera');
+                videoElement.srcObject = stream;
+            } catch (error) {
+                console.error('Unable to call user:', error);
+            }
+        }
+
+        // Start the camera when the page loads
+        window.addEventListener('load', startCamera);
+
+        // Close the camera when the window is closed
+        window.addEventListener('beforeunload', () => {
+            const videoElement = document.getElementById('camera');
+            const stream = videoElement.srcObject;
+            if (stream) {
+                // Stop all video tracks to turn off the camera
+                stream.getTracks().forEach(track => track.stop());
+            }
+        });
+        console.warn("This camera interface was succesfull")
+        console.log("WARNING: NO REPRODUCTION OF THIS VIDEO CALLING DEVICE SHOULD BE MADE, ANY COPYRIGHT WILL BE RECORDED \n PATENT BY POSTBOOK INTL")
+        console.log("CONTACT PATENT GUIDE AT 800-233-1497 \n OR CONTACT POSTBOOK INTL AT 888 400 8080")
+    </script>
+</body>
+</html>

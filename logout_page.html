@@ -1,0 +1,103 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" onclick="title()">
+<title>PostBook | Login</title>
+<head>
+    <meta charset="UTF-8">
+    <meta content="PostBook | Post Social Media and open FREE numbers.">
+    <center>
+        <h1 class="intro-head">PostBook</h1>
+    </center>
+<content>Join <content id="userammount"></content>+ users on <content class="domainame"/>!</content>
+<script>
+    let x = Math.floor((Math.random() * 10000) + 1);
+    document.getElementById("userammount").innerHTML = x;
+    let write = document.write("PostBook");
+    document.getElementsByClassName("domainame").innerHTML = write;
+    </script>
+</head>
+<script>
+    function title() {
+//? none
+}
+</script>
+<style>
+.intro-head{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(20, 176, 228);
+} 
+content{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(173, 173, 173);
+}
+#login{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.input{
+    border: grey;
+    height: 50px;
+    width: 400px;
+    border-radius: 1cm;
+    font-size: 25px;
+}
+.login-button{
+    width: 100px;
+    height: 68px;
+    border-radius: 15px;
+    background-color: rgb(18, 18, 233);
+    border: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+   text-decoration: none;
+
+}
+.postit{
+width: 10cm;
+height: 5.25cm;
+background-image: url("D:/Desktop - Alex/PostBook - Social Media/website_mt/postit.bmp");
+text-align: center;
+}
+</style>
+<center>
+<div id="login">
+    <!--Login Content-->
+    <h2>Login</h2>
+    <input type="email" placeholder="postbook-admin@postbook.com" class="input" required> <input id="curtainInput" type="button" value="&plus; Add username with account" />
+
+    <br>
+    <input type="password" placeholder="1234567890ABC*" class="input" required>
+    </div>
+    <footer>
+        <p>Ready? Let's Go!</p>
+        <input type="submit" onclick="openhome();" class="login-button" value="Login" disabled>
+    </footer>
+    <br>
+    <p>Not a Poster yet? <a href="regester.html">Sign Up</a></p>
+</center>
+
+</div>
+<script>
+    function openhome(){
+     window.open("Home.html")
+    }
+
+    document.getElementById("curtainInput").addEventListener(
+  "click",
+  function(event) {
+    if (event.target.value === "&plus; Add username with account") {
+      event.target.value = "Added username with 'CAJM23331@GMAIL.COM'"; 
+    } else {
+      event.target.value = "Unsucessful event. code: [string.boolang('main.curs(0).static:2;')]";
+    }
+  },
+  false
+    )
+
+  
+</script>
+<footer>
+    <center>
+    <div class="postit">PostBook will be shut down for building updates. Please consider using postbook offline for our update.</div>
+</center>
+</footer>
+</html>

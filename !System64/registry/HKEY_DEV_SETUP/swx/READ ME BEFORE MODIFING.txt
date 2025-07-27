@@ -1,0 +1,9 @@
+WARN:
+If you modify one thing that messes up the registry,
+Your pc may be unusible.
+===========================================================================
+You can be banned from the postbook server if you mess up a public key.
+---------------------------------------------
+The registry took about 17 Years to modify.
+========================RECOVER SETTINGS:
+Copy paste the below:

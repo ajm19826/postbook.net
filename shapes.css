@@ -1,0 +1,39 @@
+/*SHAPES FOR POSTBOOK*/
+square{
+    width: 1cm;
+    height: 1cm;
+    background-color: black;
+}
+circle{
+    width:2cm;
+    height: 2cm;
+    border: 1.75cm;
+    background-color: black;
+}
+rectangle{
+    width: 3cm;
+    height: 2.50cm;
+    background-color: black;
+}
+triangle{
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
+}
+line{
+    height:1cm;
+    width:1.25px;
+}
+p-gram {
+	width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+	background: #555;
+}
+oval{
+    /*USED FOR NONE*/
+    content: "";
+    
+}

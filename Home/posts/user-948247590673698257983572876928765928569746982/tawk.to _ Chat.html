@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title> tawk.to </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="shortcut icon" href="https://dashboard.tawk.to/_s/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" type="image/png" href="https://dashboard.tawk.to/_s/assets/images/favicon.ico" />
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext" rel="stylesheet">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700|Lato:400,400i,700,700i">
+		<link rel="stylesheet" href="">
+
+		<!--[if !IE]> -->
+			<link rel="stylesheet" href="https://dashboard.tawk.to/_s/app/625d35adebe/css/en.style.combined.css">
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+			<link rel="stylesheet" href="https://dashboard.tawk.to/_s/app/625d35adebe/css/bootstrap.style.css">
+			<link rel="stylesheet" href="https://dashboard.tawk.to/_s/app/625d35adebe/css/theme.style.css">
+			<link rel="stylesheet" href="https://dashboard.tawk.to/_s/app/625d35adebe/css/en.style.css">
+		<![endif]-->
+		<script src="https://dashboard.tawk.to/_s/assets/scripts/tracekit.js" crossorigin="anonymous"></script>
+
+		<script src="https://dashboard.tawk.to/_s/app/625d35adebe/js/base.js" crossorigin="anonymous"></script>
+		<script src="https://dashboard.tawk.to/_s/app/625d35adebe/js/framework.js" crossorigin="anonymous"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF9Wy4ggFhEBlSDuM3RpnAdZr1RtPivwU"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+		<!-- <script src="https://johnny.github.io/jquery-sortable/js/jquery-sortable.js"></script> -->
+
+		<script type="text/javascript">
+			var SHOW_WIZARD;
+			var ORIGIN                  = window.location.protocol + '//' + window.location.host;
+			var PATH                    = window.location.pathname;
+			var BASEPATH                = ORIGIN + (PATH.substr(-1) === '/' ?  PATH.substr(0, PATH.length-1) : PATH);
+			var GLOBAL_STATIC_URL       = "https://dashboard.tawk.to/_s/assets";
+			var GLOBAL_TAWK_URL         = "https://tawk.to";
+			var GLOBAL_EMBED_SERVER_URL = "https://embed.tawk.to";
+			var GLOBAL_AWS_LG_URL       = "https://s3.amazonaws.com/tawk-to-logos";
+			var GLOBAL_AWS_BN_URL       = "https://s3.amazonaws.com/tawk-to-banners";
+			var GLOBAL_AWS_PI_URL       = "https://s3.amazonaws.com/tawk-to-pi";
+			var LOCALE                  = "en";
+			var LOGERROR                = "yes";
+			var UI_VERSION              = "625d35adebe";
+			var SOCKET_PROTOCOL         = "wss";
+			var GLOBAL_MAPS_API_KEY     = "AIzaSyBF9Wy4ggFhEBlSDuM3RpnAdZr1RtPivwU";
+			var GLOBAL_UPLOAD_URL       = "https://upload.tawk.to";
+			var GLOBAL_FILE_STORAGE_URL = "https://tawk.link";
+			var STRIPE_KEY              = "pk_live_bjaLjJ7U3qufQCMiEZuRtbHu";
+			var WEBRTC_LINK             = 'https://video.tawk.to';
+			var FEED_LINK = 'https://proxy.tawk.to/v2/feed';
+			var LATEST_VERSION = "625d35adebe";
+			var KB_DOMAIN = "tawk.help";
+
+			showdown.extension('targetBlank', function() {
+				return [{
+					type:   'output',
+					regex: '<a(.*?)>',
+					replace: function (match, content) {
+					   return content.indexOf('mailto:') !== -1 ? '<a' + content + '>' : '<a target="_blank"' + content + '>';
+					}
+				}];
+			});
+
+			var markdownConverter = new showdown.Converter({
+				tables : true,
+				simplifiedAutoLink : true,
+				simpleLineBreaks : true,
+				extensions : ['targetBlank']
+			});
+
+			markdownConverter.setFlavor('github');
+
+			(function($) {
+				var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+				$.fn.attrchange = function(callback) {
+					if (MutationObserver) {
+						var options = {
+							subtree: false,
+							attributes: true
+						};
+
+						var observer = new MutationObserver(function(mutations) {
+							mutations.forEach(function(e) {
+								callback.call(e.target, e.attributeName);
+							});
+						});
+
+						return this.each(function() {
+							observer.observe(this, options);
+						});
+
+					}
+				}
+			})(jQuery);
+		</script>
+
+		<!--[if lte IE 8]>
+			<script type="text/javascript">
+				window.location.href = "/unsupported";
+			</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if( !Modernizr.cookies
+			){
+				window.location.href = "/unsupported";
+			}
+		</script>
+
+		<script src="https://dashboard.tawk.to/_s/app/625d35adebe/locale/en.js" crossorigin="anonymous"></script>
+		<script src="https://dashboard.tawk.to/_s/app/625d35adebe/js/plugin.js"></script>
+		<script src="https://dashboard.tawk.to/_s/app/625d35adebe/js/app.min.js" crossorigin="anonymous"></script>
+		<script src="https://js.stripe.com/v3/" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','','auto');
+</script>
+
+	</head>
+	<body class="fixed-header fixed-ribbon smart-style-4 en">
+		<div id="back-top" class="hidden">
+			<button type="button" class="btn btn-circle bg-color-blueDark txt-color-white" title="Back to top">
+				<i class="fa fa-gear fa-arrow-up"></i>
+			</button>
+		</div>
+		<div id="fixed-notification-container">
+		</div>
+	</body>
+</html>

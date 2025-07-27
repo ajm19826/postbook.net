@@ -1,0 +1,9 @@
+/*BOT CONSOLE*/
+#console{
+background-color: black;
+font-family: consolas;
+}
+@font-face{
+    font-family: consolas;
+    src:  url("file:///D:\Desktop - Alex\PostBook - Social Media\CONSOLAS.TTF");
+}

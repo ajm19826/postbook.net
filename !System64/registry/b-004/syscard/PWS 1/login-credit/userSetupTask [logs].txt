@@ -1,0 +1,31 @@
+tasksetup: {
+previousUsername:"pwsLocalAdmin"
+previousPSWD:{[--%signin%--] ~ chamber}
+
+tasks:{
+AvalibleTaskRun("twboot3" ~backround:false, ~keyShortcuts:false, ExitWindow:false);
+AvalibleTaskRun("backupProcess" ~backround:true, ~keyShortcuts:unset, ExitWindow:unset);
+}
+
+textlogpanel{
+[2022/03/18] [PWS]: Server started, Booting up into [twboot3.exe]
+[2022/03/18] [PWS]: STARTING PROCESS, Configuring backround app: "pwsdefender.esi" 
+[2022/03/18] [pwsdefender.esi // PWS PROGRAM] No threats found, Process Shutting Down...
+[2022/03/18] [PWS]: EXITING PROCESS, Closing "pwsdefender.esi"
+[2022/03/18] [twboot3.exe // PWS PROGRAM]: Started Menu, section3
+[2022/03/18] [twboot3.exe // PWS PROGRAM]: Started Menu, section4
+[2022/03/18] [twboot3.exe // PWS PROGRAM]: >---Setting up programs---<, section3
+[2022/03/18] [KYBDHYPR.esi // PWS PROGRAM]: , Set default keyboard language to EN-US
+>------------SNAP--------<
+[2022/03/18] [PWS]: STARTING PROCESS, Configuring app: "term.exe"
+[2022/03/18] [!!!ERROR!!!]: KEYBOARD, Keyboard cant configure the selected app. "wnlKeyboardSelProg.dim" is not installed yet.
+[2022/03/18] [cmd]: COMMAND, ran: taskkill -f -im "twboot3.exe"
+[2022/03/18] [!!!ERROR!!!]: Several System apps couldnt be installed, PROGRAM ABORTED"
+[2022/03/18] [cmd]: COMMAND, ran: tasklist
+[2022/03/18] [tasklist]: added task: "desktopsetup.exe"
+Process not detected, Aborting
+
+
+}
+
+}

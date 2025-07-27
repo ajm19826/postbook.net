@@ -1,0 +1,13 @@
+**This is the virtual telephont modem control panel.**
+DriverType=%driver%
+f driver[] = "MODEM"
+driver[modem].type = tel(void) tel.void = var();
+in var() = driver[modem] = void.write("TELEPH MODEM");
+**Get virtual driver / repair key**
+Driver=%web%
+f web[] = "pws"
+web[pws].type = link.src("https://drivers.pws.net/modem?file=/localroot/modm.drv");
+pws = link.src(type= download);
+
+if driver = (not(in (type= file)), pws);
+if(else) driver = (in (type= file)), void;

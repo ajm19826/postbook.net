@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostBook Premium Form | PostBook</title>
+</head>
+<body>
+ <center>
+    <h1>PostBook Premium</h1>
+ </center> 
+ <br>
+ <a href="Home.html" onclick="alert('Changes you made will not be saved.')">Exit</a>
+ <br>
+<form action="premium.html">
+<b>OPTIONAL</b> enter phone number to link postbook to postbook mobile
+<br>
+<input type="tel" max="10" min="10" placeholder="+1 000 000 0000">
+<br>
+<b>REQUIRED</b>: Please enter your card number to purchace premium postbook
+<br>
+<input type="text" maxlength="4" required placeholder="3122"><input type="text" maxlength="4" placeholder="5721" required><input type="text" maxlength="4" placeholder="8396" required><input type="text" maxlength="4" placeholder="2153" required>
+<br>
+<input type="text" maxlength="3" placeholder="CVC" required><input type="date" maxlength="3" placeholder="EXP DATE" required>
+<hr color="black">
+<b>Click the button below to validate</b>
+<button onclick="runtimeExeptionArg_v_noexcape()">Validate And open premium</button>
+</form>
+</body>
+<script>
+    function runtimeExeptionArg_v_noexcape(){
+        alert("You are leaving PostBook Premium and moving to PostBook Premium \n Do you want to continue? Press [X] to cancel")
+    }
+</script>
+<style>
+    html{
+        background-color: rgba(41, 37, 37, 0.712);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+    }
+    ,input{
+        width: 5cm;
+        height:50px;
+        background-color: white;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 15px;
+        border: 5px gray;
+    }
+    .input:hover{
+        width: 1cm;
+        height:200px;
+        background-color: rgba(255, 255, 255, 0.719);
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 15px;
+        border: 5px gray;
+    }
+</style>
+
+</html>

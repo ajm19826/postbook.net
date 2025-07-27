@@ -1,0 +1,4 @@
+@ECHO OFF
+echo Hello, This is a test program.
+title TEST PROGRAM EXE 1
+PAUSE

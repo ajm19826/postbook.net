@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Greeting Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card-container {
+            background-color: white;
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .greeting {
+            font-size: 1.8rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <h1 class="greeting">Personalized Greeting Card</h1>
+        <input type="text" id="name-input" placeholder="Enter your name" />
+        <button id="generate-button">Generate Greeting</button>
+        <p id="personalized-greeting" class="hidden"></p>
+    </div>
+
+    <script>
+        document.getElementById("generate-button").addEventListener("click", function() {
+            const name = document.getElementById("name-input").value.trim();
+            const greetingMessage = name ? `Hello, ${name}! Wishing you a wonderful day!` : "Please enter your name to get a greeting.";
+            
+            const greetingElement = document.getElementById("personalized-greeting");
+            greetingElement.textContent = greetingMessage;
+            greetingElement.classList.remove("hidden");
+
+            // Optionally clear the input field
+            document.getElementById("name-input").value = "";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+accountprefix(
+
+username=Darrin DYoung,password=%default%
+username=RetailAdmin,password=PWSYSUTPN
+
+)
+accountstartup(
+
+R
+
+
+)

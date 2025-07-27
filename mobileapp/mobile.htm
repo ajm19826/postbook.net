@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en" id="html html--">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile PostBook</title>
+</head>
+<body>
+   <center>
+       <div id="appcontent">
+           <button class="button-new" onclick="logout">Sign Out</button>
+           <h1>POSTBOOK</h1>
+           <script>
+               function logout(){
+                   window.open("file:///D:/Desktop%20-%20Alex/PostBook%20-%20Social%20Media/logout_page.html")
+                   document.getElementById("html html--").style.display = "none";
+
+               }
+           </script>
+           <a href="#down">GO to the bottom of page</a>
+        <style>
+            .button-new{
+      width: fit-content;
+      height: 68px;
+      border-radius: 15px;
+      background-color: rgb(18, 18, 233);
+      border: blue;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      font-size: 25px;
+     text-decoration: none;
+  
+  }
+  .button-new:hover{
+      width: fit-content;
+      height: 68px;
+      border-radius: 15px;
+      background-color: rgb(36, 36, 105);
+      border: blue;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      font-size: 25px;
+     text-decoration: none;
+  
+  }
+  .button-new{
+      width: fit-content;
+      height: 68px;
+      border-radius: 15px;
+      background-color: rgb(36, 36, 105);
+      border: blue;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      font-size: 25px;
+     text-decoration: none;
+  
+  }
+          </style>
+  <!--END Head Ctnt-->
+  
+  <script>
+          function newtitle() {
+    newPageTitle = 'PostBook | Home';
+              document.title.replace = newPageTitle;
+              }    </script>
+              <link id="currentIcon" rel="icon" type="image/png" href="D:\Desktop - Alex\PostBook - Social Media\website_mt\favicon.png" />
+              <script>
+       
+  </script>
+  <style>
+      .sidebar{
+          width: 500px;
+          height: 1000px;
+          background-color: grey;
+          border: rgba(44, 41, 41, 0.795);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          position: absolute;
+    left: 0px;
+    padding: 10px;
+      }
+      .sidebar-txt{
+          height: 75px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          border: rgba(48, 44, 44, 0.212);
+          left: 0px;
+    padding: 10px;
+      }
+      .uname-bar.sidebar{
+      left: 5px;
+      font-weight: 705;
+      
+      }
+      .login-checkbox {
+      accent-color: rebeccapurple;
+      border: rgba(102, 51, 153, 0.726);
+      background-color: cadetblue;
+  }
+ 
+  #accountimg{
+      left: 0;
+      width: 15;
+      height: 10;
+      background-image: url(https://scontent-lga3-.xx.fbcdn.net/v/t1.6435-9/122873245_117285673506874_8323306263802202818_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=m7UtIftQCqwAX-fky0Q&_nc_ht=scontent-lga3-1.xx&oh=00_AT-GArfiLabLmOWaAPvWZ5c3HAm_FQ4N5MfzUqQEwFPwsg&oe=627E3D35);
+  }
+  /*POST*/
+  .post-section{
+      /*
+      Post section defins the area of *WHERE the post will be.
+      image-section defines if there is a big image.
+      */
+      width: 500px;
+      height: 530px;
+      background-color: dimgray;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: black;
+      font-weight: 400;
+      border-radius: 20px;
+  border: gray;
+  }
+  .img{
+      border-radius: 5px;
+      alt: "Image";
+      background-image: url(imgdeleted.png);
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      width: 100%;
+      height: 2.50cm;
+      background-repeat: no-repeat;
+  }
+  .video{
+      border-radius: 10px;
+      width: 150cm;
+      height: 100cm;
+  }
+  .uname-label{
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+  }
+  .text{
+      border: dimgrey;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .reply-section{
+      border: black;
+      font-family: Arial, Helvetica, sans-serif;
+      
+  }
+  .label-reply-section{
+  background-color: goldenrod;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 55px;
+  }
+  .iframe{
+    border: 0.25cm;
+    border-color:rgb(46, 43, 43);
+    border-radius: 1cm;
+    width: 10cm;
+    height:5.95cm;
+    /*
+    Only avalible to primium users.
+    $20 Per Iframe
+    */
+  }
+  /*END POST*/
+  
+  </style>
+          <!--Html content--> 
+          <br>
+          <div class="post-section" style="height: 15.50cm;">
+                <p class="uname-label">PostBook</p>
+                <h1>&iscr;&nscr;&fscr;&oscr;</h1>
+        <div class="text">
+        
+        SNAPSHOT 10w08a> <B>1.05</B>
+        <br>
+        "Clean up postbook" <hashtag onclick="query_postBookBUGS_HASHTAG()">#postbookBugs?x=query-1</hashtag>
+        <br>
+        <hashtag title="PostBook Bugs | Created: 2009-05-10 AT 12:00 AM" onclick="postbookBugs()">#postbookBugs</hashtag>
+        <script>
+        function query_postBookBUGS_HASHTAG() {
+          var query_1 = window.open("", "anotherWindow", "width=300,height=150");
+          query_1.document.write("<HTML><TITLE>PostBook | Hashtag >  CLEANUP #postbookbugs?x=query-1</TITLE><h1 style=color:red; >#§§§§§§§§</h1><body><h2>Trying to achieve:</h2><hr style=color:lightgray; ><p>List</p><br><ol><li>Better <b>CSS</b> design</li><LI>Posts having black border 2px: <svg width=400 height=110<rect width=15 height=15 style=fill:black;stroke-width:3;stroke:white /></svg></LI></ol></body><style>html{font-family:sans-serif;background-color:black; color:white;}</style></footer></HTML>");
+        }
+        </script>
+          <div class="reply-section">
+                <p>Reply</p>
+                <br>
+                <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                <caption>Click <i>[Enter]</i> When reply input</caption>
+                <p>Like / Dislike</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+                  
+        
+                
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .fa:hover {
+          color: darkblue;
+        }
+        hashtag{
+          font-family: Arial, Helvetica, sans-serif;
+          text-decoration: underline;
+          color: blue;
+          cursor: pointer;
+        }
+        hashtag:hover{
+          font-family: Arial, Helvetica, sans-serif;
+          text-decoration: underline;
+          color: darkblue;
+          cursor: pointer;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+                </div>
+        </div>
+        </div>
+        
+          <br>
+          <div class="post-section" style="height: 15.50cm;">
+                <p class="uname-label">Alex M</p>
+               <img class="img" src="file:///D:/Desktop%20-%20Alex/PostBook%20-%20Social%20Media/Home/posts/admin.alexm/com.bugs/1SKEPPY2.png"> 
+        <div class="text">
+          Postbook chrome icon shows AMONG US.
+          <br>
+          how sus :)
+        <hashtag title="PostBook Bugs | Created: 2009-05-10 AT 12:00 AM" onclick="postbookBugs()">#postbookBugs</hashtag>
+        <hashtag title="ALT=[noname] | Created: ALT=[&#9888;]" onclick="sussybakaHASHTAG()">#sussybaka</hashtag>
+          <div class="reply-section">
+                <p>Reply</p>
+                <br>
+                <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                <caption>Click <i>[Enter]</i> When reply input</caption>
+                <p>Like / Dislike</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <script>
+                  function postbookBugs() {
+                  var newtab = window.open("", "anotherWindow", "width=300,height=150");
+                  newtab.document.write("<HTML><STYLE>.href{color:blue; text-decoration:underline;}</style><TITLE>PostBook | Hashtag #postbookbugs</TITLE><HEAD><H1>About <hashtag>#postbookBugs</hashtag></H1><hr color=black ></HEAD><BODY><p>The hashtag is for &quot;PostBook Bugs Report&quot;</p><br><p>In your post, add the bug, then do: <code style=color:blue;text-decoration:underline; >#postbookBugs</code></p><br>The bug will get sent to &quot;PostBook Bug system.&quot;<br><b><em>View the latest update for more. <a onclick=dn5() class=href >View update</a></em></b><hr color=red ><form action=?submit ><p>Submit / Report bug</p><br><input type=text placeholder=HEADING id=bugreport required><br><textarea placeholder=&quot;Bug Content&quot; required></textarea><br><input type=file title=&quot;Add image to show&quot; ><br><input type=submit ></form></BODY><STYLE>html{font-family:sans-serif;} #bugreport{height:0.75cm; width:5.50cm; color:grey;} body{border: 1px solid; padding: 10px; box-shadow: 5px 10px #888888;}</STYLE></HTML>");
+                  function dn5() {
+                    document.write("<iframe src=02876459.html style=width:50cm;height:50cm; ></iframe> <br><title>POSTBOOK HTTP REQUEST 0</title> <a onclick=homerel() href=#home >Go home</a>")
+                  }
+                  function homerel() {
+                    window.location.reload()
+                  }
+                }
+                function sussybakaHASHTAG() {
+                  var newtab_baka = window.open("", "anotherWindow", "width=300,height=150");
+                  newtab_baka.document.write("<HTML><TITLE>PostBook | Hashtag #postbookbugs</TITLE><h1>#SUSSYBAKA</h1><body><iframe width=1280 height=720 src=https://www.youtube.com/embed/dQw4w9WgXcQ title=lol_get_trolled_:-) frameborder=0 allow=accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe></body><br><footer><p>Content by the community</p></footer></HTML>");
+                }
+                function errorHASHTAG() {
+                  var newtab_notfounderror = window.open("", "anotherWindow", "width=300,height=150");
+                  newtab_notfounderror.document.write("<HTML><TITLE>PostBook | Hashtag 404</TITLE><h1>404</h1><body></body><br><center><h2 style=color:red; >The hashtag was not found.</h2></center></HTML>");
+                }
+                
+                  </script>
+                  
+                  <b> Click the button to open the new user-defined sized window </b> 
+                  <br><br>
+                  <button onclick="openWindow()"> Open Window </button>
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .fa:hover {
+          color: darkblue;
+        }
+        hashtag{
+          font-family: Arial, Helvetica, sans-serif;
+          text-decoration: underline;
+          color: blue;
+          cursor: pointer;
+        }
+        hashtag:hover{
+          font-family: Arial, Helvetica, sans-serif;
+          text-decoration: underline;
+          color: darkblue;
+          cursor: pointer;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+                </div>
+        </div>
+        <div class="caption">
+          <b>PostBook <p style="color: rgb(53, 175, 216);">BOT</p> <i style="color: grey;">EDITED</i></b>
+          <br>
+          <p>Thanks for showing this to us.
+            <br>
+            We will try to fix this as soon as we can.
+            <hashtag onclick="errorHASHTAG()">#postbookBugs?PB-144020</hashtag>
+            <mark>ERROR WAS NOT FOUND. &quot;PB-144020&quot;</mark>
+          </p>
+        </div>
+                </div>
+                <br>
+                <br>
+                <br><br>
+                <br>
+                <br><br>
+                <br>
+                <br><br>
+                <br>
+                <br><br>
+                <br>
+                <br>
+          <div class="post-section">
+                <p class="uname-label">John Kelly</p>
+        <img class="img" src="contentloader.sc?imQUERY=imagenoload" alt="Image not found. Whoops!" width="130">
+                <div class="text">
+        This image is CAP, so i decided to have some fun with this:
+        <div class="reply-section">
+                <p>Reply</p>
+                <br>
+                <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                <caption>Click <i>[Enter]</i> When reply input</caption>
+                <p>Like / Dislike</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .fa:hover {
+          color: darkblue;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+                </div>
+        </div>
+                </div>
+                <br>
+          <br>
+          <div class="post-section">
+                <p class="uname-label">Alex M</p>
+        <img class="img" src="C:\Users\Alex\Downloads\botname.png" alt="Image not found. Whoops!" style="height: 5cm;">
+                <div class="text">
+        I went on to see what the name of my
+        <br>
+        bot was on the console. but guess what?
+        <br>
+        can you read this? its the name of my bot:
+        <div class="reply-section">
+                <p>Reply</p>
+                <br>
+                <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                <caption>Click <i>[Enter]</i> When reply input</caption>
+                <p>Like / Dislike</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .fa:hover {
+          color: darkblue;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+                </div>
+        </div>
+                </div>
+                <br>
+          <br>
+          <div class="post-section">
+                <p class="uname-label">Josh Madalee</p>
+                <square></square><circle></circle><triangle></triangle>
+        <div class="text">
+        Who wants to <b>LEARN</b> there shapes?
+        <div class="reply-section">
+                <p>Reply</p>
+                <br>
+                <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                <caption>Click <i>[Enter]</i> When reply input</caption>
+                <p>Like / Dislike</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .fa:hover {
+          color: darkblue;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+                </div>
+        </div>
+                </div>
+                <br>
+          <div class="post-section">
+            <p class="uname-label">PostBook</p>
+        <iframe class="iframe" src="02876459.html">IFRAMEID: 978J8U-09ik-09-09i-09I-09-09U-J8y087-94r 
+          IF WEBSITE: https://content--postbook.recieve.net/id=02876459+userid=387W948RYW9B4875YH976N95678/c.html
+        </iframe>
+        <code onclick="iframe_3002()">View iframe in full screen</code>
+        <script>
+          function iframe_3002(){
+            document.write("<title>PostBook | Full Screen Iframe</title><body><iframe src=02876459.html id=3002></iframe></body><style>#3002{width:fit-content; height:fit-content;}</style><footer><a onclick=homeFullScreen() title=CLICK_TO_EXIT_FULL_SCREEN_AND_RETURN_TO_POSTBOOK>exit full screen</a></footer>")
+          }
+        </script>
+        <div class="text">
+        Update 1.05 2022
+        <div class="reply-section">
+            <p>Reply</p>
+            <br>
+            <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+            <caption>Click <i>[Enter]</i> When reply input</caption>
+            <p>Like / Dislike</p>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+        font-size: 50px;
+        cursor: pointer;
+        user-select: none;
+        }
+        
+        .fa:hover {
+        color: darkblue;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+            </div>
+        </div>
+        </div>
+        <br>
+          <div class="post-section">
+                <p class="uname-label">Josh Madalee</p>
+                <video width="230" height="200" controls muted loop autoplay disabled>
+                    <source class="video" src="D:\Desktop - Alex\PostBook - Social Media\Home\posts\user-586034967039487093870658273045817087346198276397136498723069870692847591874698123594716\video-1.webm" type="video/mp4">
+                    No video support.
+                    </video>
+        <div class="text">
+            Ok, Not gonna lie but this is really satisfing
+            <div class="reply-section">
+                <p>Reply</p>
+                <br>
+                <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                <caption>Click <i>[Enter]</i> When reply input</caption>
+                <p>Like / Dislike</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .fa:hover {
+          color: darkblue;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+                </div>
+        </div>
+                </div>
+                <br>
+                <div class="post-section" style="height: 625px;">
+                    <p class="uname-label">Microsoft</p>
+        <img class="img" style="height: fit-content;" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/208867272_10158540990598721_2717576987222803494_n.jpg?stp=dst-jpg_p180x540&_nc_cat=110&ccb=1-5&_nc_sid=9267fe&_nc_ohc=DNznhhzAYWEAX8L3s5E&_nc_ht=scontent-lga3-1.xx&oh=00_AT_v3tDSN2Easv0p-os0ttvauu7_8nsY30H28JZ1Q5ZPPg&oe=627EDE78">
+                    <div class="text">
+                In Space Jam: A New Legacy, LeBron James learns that saving the day is as much about knowing the code as it is knowing the court. We’re teaming up with Warner Bros. Pictures to help students learn the tech skills they need to take on challenges and build their own legacies. Check it out: https://msft.it/6188nO446
+                Don't forget to see SPACE JAM: A NEW LEGACY in theaters and on HBO Max* July 16. #SpaceJamMovie 
+                
+                <p>Reply</p>
+                    <br>
+                    <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                    <caption>Click <i>[Enter]</i> When reply input</caption>
+                    <p>Like / Dislike</p>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <style>
+            .fa {
+              font-size: 50px;
+              cursor: pointer;
+              user-select: none;
+            }
+            
+            .fa:hover {
+              color: darkblue;
+            }
+            </style>
+            
+            <script>
+        //?
+            </script>
+            
+            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+            
+            <script>
+            function myFunction(x) {
+              x.classList.toggle("fa-thumbs-down");
+            }
+            </script>
+                    </div>
+            </div>
+                    </div>
+                    <div class="post-section" style="height: 815px;">
+                        <p class="uname-label">Microsoft Azure &NonBreakingSpace;</p>
+                        <img src="D:\Desktop - Alex\PostBook - Social Media\Home\posts\user-948247590673698257983572876928765928569746982\IMG_1.jpg" style="height: fit-content;">
+                            No video support.
+                            </video>
+                <div class="text">
+                    Save Millions in Integrations costs, Increase Productivity 5X and Reduce Integration Time by <b>90%!</b>
+                    <div class="reply-section">
+                        <p>Reply</p>
+                        <br>
+                        <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                        <caption>Click <i>[Enter]</i> When reply input</caption>
+                        <p>Like / Dislike</p>
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <style>
+                .fa {
+                  font-size: 50px;
+                  cursor: pointer;
+                  user-select: none;
+                }
+                
+                .fa:hover {
+                  color: darkblue;
+                }
+                </style>
+                
+                
+                
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+                
+                <script>
+                function myFunction(x) {
+                  x.classList.toggle("fa-thumbs-down");
+                }
+                
+                </script>
+                        </div>
+                </div>
+            </div>
+            <div class="post-section" style="height: 875px;">
+                <p class="uname-label">iD tech camps</p>
+                <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t45.1600-4/243877003_23848951910770000_1791542452427530100_n.jpg?stp=cp0_dst-jpg_p526x296_q75_spS444&_nc_cat=110&ccb=1-5&_nc_sid=e84a38&_nc_ohc=35VN2UN-ZxAAX9dJoPb&tn=hW2W9uFf4oJN3Cr_&_nc_ht=scontent-lga3-1.xx&oh=00_AT8SLGHkMASnlZKqsPiZT4SQDsn18oW73demcPmj7Y1Vmw&oe=625E40A5" style="height: fit-content;" class="img">
+                    No video support.
+                    </video>
+        <div class="text">
+            Today we are celebrating International Day of Human Space Flight. 🚀 This historic day paved the way for space travel as we know it.    
+            <iframe style="border: transparent; height: 50px;"  scrolling="no" srcdoc="<!doctype html><html><title>DATEWARN</title><style>date-print{font-family:  sans-serif;}</style><head><date-print>DATE: 2022-4-12</date-print></head><footer>(date mensioned)</footer></html>">srcdoc</iframe>
+        
+            <div class="reply-section">
+                <p>Reply</p>
+                <br>
+                <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+                <caption>Click <i>[Enter]</i> When reply input</caption>
+                <p>Like / Dislike</p>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .fa:hover {
+          color: darkblue;
+        }
+        @media only screen and (max-width: 600px) {
+          html {
+           display: none;
+          }
+        }
+        </style>
+        
+        <script>
+          const d = new Date();
+          document.getElementById("screenTIME").innerHTML = d;
+          </script>
+          
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+                </div>
+        </div>
+        </div>
+        <div class="post-section" style="height: 875px;">
+            <p class="uname-label">Jamorah Tubman</p>
+            <video width="230" height="200" controls muted loop autoplay disabled>
+                <source class="video" src="file:///D:/Desktop%20-%20Alex/PostBook%20-%20Social%20Media/Home/posts/user-8039840239875028376028794568724985719847562873469582824385/video-2.mp4" type="video/mp4">
+                No video support.
+                </video>
+        <div class="text">
+        Bruh, A littral bear in the pond. It's like <p style="color: red;" title="Code: Red, [Bad Word Detected.]"><i>S***</i></p>
+        <div class="reply-section">
+            <p>Reply</p>
+            <br>
+            <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+            <caption>Click <i>[Enter]</i> When reply input</caption>
+            <p>Like / Dislike</p>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+        font-size: 50px;
+        cursor: pointer;
+        user-select: none;
+        }
+        
+        .fa:hover {
+        color: darkblue;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+            </div>
+        </div>
+        </div>
+        <div class="post-section" style="height: 780px;">
+            <p class="uname-label"><i>[Signed Out]</i></p>
+            <img class="img" src="D:/Desktop - Alex">
+        <div class="text">
+        Get rickrolled!!!!!
+        <p class="uname" title="For / Who the post was for">@jmorah.t.1</p>
+        <video>
+        </video>
+        <video width="400" controls loop id="vid1">
+          <source src="D:\Desktop - Alex\PostBook - Social Media\Home\posts\user-739841608476198568791364017391869481698376.unactive\VID_1.mp4"  type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <script>
+          document.getElementById('video_chappa-langlough').currentTime = 15; // Set the starting time to 15 seconds
+        
+        </script>
+           <script>
+               document.getElementById('vid1').currentTime = 40;
+           </script> 
+        <div class="reply-section">
+            <p>Reply</p>
+            <br>
+            <input type="text" placeholder="Reply"  value="&#128079; e.g. I Like It Very Much! &#128079;"class="input-reply-section">
+            <caption>Click <i>[Enter]</i> When reply input</caption>
+            <p>Like / Dislike</p>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <caption>1 Reply</caption>
+            <div class="caption">
+              <b>Jamorah Tubman</b>
+              <br>
+              <p>How Dare You!!!!</p>
+            </div>
+            
+           
+        <style>
+        .fa {
+        font-size: 50px;
+        cursor: pointer;
+        user-select: none;
+        }
+        
+        .fa:hover {
+        color: darkblue;
+        }
+        .uname{
+          background-color: lightblue;
+          color: black;
+        }
+        .uname:hover{
+          background-color: blue;
+          color: white;
+        }
+        .caption{
+          border-radius: 1cm;
+          background-color: #888;
+        font-family: Arial, Helvetica, sans-serif;
+        
+          border: white;
+          /*A comment (reply)*/
+        }
+        </style>
+         
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+            </div>
+        </div>
+        </div>
+        <div class="post-section">
+          <p class="uname-label"></p>
+          <video width="230" height="200" controls muted loop autoplay disabled>
+              <source class="video" src="D:\D/esktop - Alex\PostBook - Social Media\Home\posts\user-586034967039487093870658273045817087346198276397136498723069870692847591874698123594716\video-1.webm" type="video/mp4">
+              No video support.
+              </video>
+        <div class="text">
+        <div class="reply-section">
+          <p>Reply</p>
+          <br>
+          <input type="text" placeholder="Reply"  value=""class="">
+          <caption><i></i></caption>
+          <p></p>
+          <link rel="stylesheet" href="https://cdnjsj.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .fa {
+        font-size: 50px;
+        cursor: pointer;
+        user-select: none;
+        }
+        
+        .fa:hover {
+        color: darkblue;
+        }
+        </style>
+        
+        
+        
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <script>
+        function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+          </div>
+        </div>
+          </div>
+         
+        <div id="dwnpage"></div>
+        <!--Bottom Of page-->
+        <div id="msg">
+            <img src="D:\Desktop - Alex\PostBook - Social Media\website_mt\favicon.png" alt="POSTBOOK" width="130" height="130"><div style="float: right; color: white;"><h1>Ahola!</h1><br><p>We reccomend you use the <b>WEB</b> version <br> of postbook.</p><br><a href="file:///D:/Desktop%20-%20Alex/PostBook%20-%20Social%20Media/Home.html" title="click to go to web version">Click me</a></div>
+        </div>
+        <content id="end">Looks like you've reached the end.</content>
+        <div id="down" hidden></div>
+       </div>
+   </center> 
+</body>
+<style>
+    html{
+        background-color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #appcontent{
+        background-color: rgba(43, 39, 39, 0.466);
+        color: white;
+        width: 15cm;
+        height: fit-content;
+    }
+    #msg{
+        color: red;
+        width: 14.75cm;
+        height: 5.25cm;
+        border-top-left-radius: 1cm;
+        border-top-right-radius: 1cm;
+        color: black;
+
+    }
+</style>
+</html>

@@ -1,0 +1,14 @@
+{
+"name": "PostBook",
+    "description": "Post from the web!",
+    "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png"
+      
+    }
+  }
+}

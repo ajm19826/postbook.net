@@ -1,0 +1,1 @@
+x=msgbox("You do not have permissions to view this file.", 1+16, "Aborted")

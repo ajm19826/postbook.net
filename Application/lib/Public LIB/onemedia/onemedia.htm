@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostBook OneMedia</title>
+    <!--Tabs-->
+   <script>
+    console.log("[POSTBOOK]\n Ready to make a change?\n We are hiring at PostBook!\nBrowse some of our careers at: https://careers.postbook.net/")
+   </script>
+<style>
+html{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+
+/* CSS */
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+  </style>
+  
+ 
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')">NATO Collab</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Home</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Create Servers</button>
+  </div>
+  
+  <div id="London" class="tabcontent">
+    <div style="float:right;">
+<h1>Nato OS Collab</h1>
+<p>This collaboration project with <b>PostBook One Media</b> and <b>NATO Dev</b> has made it possible to intergate NATO OS in an <i>HTML website.</i></p>
+    </div>
+    <img src="NATOIFRAME1.png" width="880" height="440" style="float:left;">
+  <button style="float:right;" class="button-17" role="button">Get Started</button>  <button style="float:left;" class="button-17" role="button">Learn More</button>
+
+  </div>
+  
+  <div id="Paris" class="tabcontent">
+
+  </div>
+  
+  <div id="Tokyo" class="tabcontent">
+
+  </div>
+  
+  <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+     
+  
+  
+</head>
+<body>
+    
+</body>
+<!--NO HTML ELEMENTS CAN PASSTHROUGH-->
+
+<footer>
+    <style>
+      .footer{
+    font-size: 10px;
+    background-color: black;
+    color:white;
+  }
+    </style>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+      <caption ID="0"><B>CREDITS</B>©Written by Moraly Froms and Jacob Sanchez, FINISHED 2024 EDITED 2049</caption><br>
+    <caption ID="1"><B>1</B>©2018 - PostBook Education Services</caption><br>
+    <caption ID="1"><B>1</B>©1998 - PostBook Web Services (©1991 PostBook Web) <a class="captionhref" href="" title="Open PostBook Webservice">https://licence.webservice.postbook.net</a></caption><br>
+    <caption ID="2"><B>2</B>THE USE OF THIS PROGRAM IS NOT TO BE COPIED, OR CONFUSED WITH <i>G SUITE</i></caption><br>
+    <caption ID="3"><B>3</B>RESOURCES INVOLVING THE MAIDPHONE, ANKER, NIXXON, GOMOTORS, PWS, POSTBOOK, <span title="Discontinued as a 3-rd class website">USA MOBILE</span>, MEDKIT, OR ANY OTHER POSTBOOK OWNED BUISNESSES</caption><br>
+    <caption ID="4"><B>4</B>DISCOUNT OFFERS OR MONTHLY PAYMENTS MUST HAVE A <I>POSTBOOK PREMIUM</I> MEMBERSHIP OR A <I TITLE="(PostBook student membership)">MyEdu MEMBERSHIP</I>, <B>ON ANY UNDERSTANDING ON HOW TO CREAT A MEMBERSHIP,<a CLASS="captionhref" href="#NEWMEMBER"> CLICK HERE</a></B></caption><br>
+    <caption ID="5"><B>5</B>TO TRADE IN A POSTBOOK DEVICE, YOU MUST COMPLY WITH THE TERMS AND CONDITIONS</caption><br>
+    <caption ID="6"><B>6</B>IF THE POSTBOOK PRODUCTS ARE COPIED, SUCH AS <I>DEVICES, SERVICES, WEBSITES, <SPAN title="Can be copied with account owners premission, see #11">OR ACCOUNTS<a class="cnote" href="#11">11</a></SPAN></I><img src="image files/Private/CopyrightIMG.png" width="1" height="1" alt="WARNING, IF THIS IMAGE IS NOT SHOWN, THAN THIS WEBSITE HAS BEEN COPIED, OR REPUBLISHED"></caption><br>
+    <caption ID="7"><B>7</B>TRADE IN VALUES, MUST TRADE IN A DEVICE MADE IN 2032 OR NEWER, TO TRADE IN A DEVICE SUCH AS, <I>USMOBILE</I> DEVICE, THAN PLEASE CONTACT THE USAMOBILE WEBSITE. </caption><br>
+    <caption ID="8"><B>8</B>TO TRADE IN A CAR, <i><MARK TITLE="SEE #12 OR CONTACT ZEE FAMILY CARS (<i>modified source</i>)"><A CLASS="CNOTE" HREF="#12">MODIFIED</A></MARK> OR <I TITLE="SEE #13">RUNNING</I> OR <U>NOT</U> PLEASE CONTACT <SPAN TITLE="US +1 800-425-8080">GOMOTORS</SPAN>  </i></caption><br>
+    <caption ID="9"><B>9</B>IF YOU ARE PURCHACING AN ITEM OUTSIDE OF THE USA, PLEASE DO NOT TRADE YOUR ITEM IN TO THE <B>POSTBOOK <I>USA</I></B> OFFICE, PLEASE RESORT TO TRADING YOUR ITEM TO YOUR OFFICE IN THE AREA, MAIDPHONE SHOPS ARE AVALIBLE IN <B><SPAN title="APPLE INC. (800 MY-APPLE)">APPLE</SPAN> <I>SHOPS</I></B></caption><br>
+    <caption ID="10"><B>10</B>IF YOU ARE PURCHACING AN ITEM IN THE US, YOU AGREE TO HAVE YOUR DEVICE SCANNED, VIEWED OR MONITORED FOR THE MINIMUM OF <I>3 SECONDS</I> AND MAX OF <I>ONE HOUR</I> (<U>depends on device use</U>)</caption><br>
+    <caption ID="11"><B>11</B>TO HAVE AN ACCOUNT COPIED, OR MODIFIED, (<U>OR PASSWORD SHARED</U>) PLEASE CONTACT THE <I title="APPLIES TO USA AND CANADA ONLY"><U>PWS DEPARTMENT OF ACCOUNTS (<B>USA/<SPAN TITLE="CANADA">CA</SPAN>:</B> <I>+1 888-704-2366</I>)</U></I></caption><br>
+    <caption ID="12"><B>12</B>TO TRADE A MODIFIED DEVICE, (<I>includes veichles, "GOMOTORS LLC."</I>) PLEASE FILL OUT A <I>POSTBOOK MODIFICATION SHEET,</I><A CLASS="CAPTIONHREF" HREF="" TITLE="Open PostBook Modification Sheet">https://webservice.postbook.net/lib/modifyform.htm</A></caption><br>
+    <caption ID="13"><B>13</B>TO TRADE A <I>RUNNING</I> DEVICE, IT MUST BE FROM 2032 OR NEWER, OLDER DEVICES CANNOT BE SOLD TO PWS/GOMOTORS</caption><br>
+    <caption ID="14"><B>14</B>TO TRADE A <I>Non-PostBook</I> DEVICE, IT MUST BE FROM 2032 OR NEWER, AND RELATIONED WITH POSTBOOK OR POSTBOOK (<b>PARTNER</b>)</caption><br>
+    <caption ID="15"><B>15</B>TO PURCHACE A WEB PRODUCT, (<i>Website</i>) or (<i>PostBook Premium,</i><u> Subscriptioin</u>) PLEASE COMPLY WITH THE TERMS OR CONDITIONS WITH THE PURCHACE. IF UNABLE TO COMPLY, YOUR SUBSCRIPTION WILL BE BANNED AND <I>NON-REFUNDABLE</I></caption><br>
+    <caption ID="16"><B>16</B>SMS IS NO LONGER SUPPORTED WITH <I>MAIDPHONE 10 <B>OR EARLIER</B></I>, PLEASE UPGRADE TO A NEWER PHONE</caption><br>
+    <caption ID="17"><B>17</B>MAIDPHONE CALLS ARE NO LONGER SUPPORTED WITH <I>MAIDPHONE 10 <B>OR EARLIER</B></I>, PLEASE UPGRADE TO A NEWER PHONE</caption><br>
+    <caption ID="18"><B>18</B>We approximate your location from your internet IP address by matching it to a geographic region or from the location entered during your previous visit to MaidPhone.</caption><br>
+    <caption ID="19"><B>19</B>SCRIBBLEITIS WEBSITES ARE UNDER COPYRIGHT FROM THE CREATOR, FOR COPYING PURPOSES PLEASE CONTACT THE DOCUMENT OWNER</caption><br>
+    <caption ID="20"><B>20</B>FOR SPECIAL DEALS OR PARTNERSHIPS, PLEASE CONTACT MAIDPHONE, (<I>SPECIAL DEALS ONLY QUALIFY FOR <B>POSTBOOK PREMIUM</B> MEMBERS</I>)</caption><br>
+  
+  
+  </div>
+    <br>
+    
+    </footer>
+</html>

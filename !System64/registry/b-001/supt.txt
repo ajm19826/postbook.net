@@ -1,0 +1,4 @@
+<16BT>
+=======================*
+#dir (btKey "QWERTY" [layout:keyUS _qwerty]);
+!syskey 1

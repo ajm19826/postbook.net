@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .generated-name {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Name Generator</h2>
+    <button onclick="generateName()">Generate Random Name</button>
+    <div id="generated-name" class="generated-name"></div>
+</div>
+
+<script>
+    const firstNames = [
+        "John", "Jane", "Alex", "Emily", "Michael", "Sarah", "James", "Anna", 
+        "David", "Laura", "William", "Sophia", "Ethan", "Chloe", "Daniel", "Mia"
+    ];
+
+    const lastNames = [
+        "Smith", "Johnson", "Brown", "Taylor", "Anderson", "Thomas", "Jackson", 
+        "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson", "Clark"
+    ];
+
+    function generateName() {
+        const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+        const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+        
+        const fullName = `${firstName} ${lastName}`;
+        document.getElementById("generated-name").textContent = fullName;
+    }
+</script>
+
+</body>
+</html>

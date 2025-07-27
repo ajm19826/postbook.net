@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post | PostBook Premium</title>
+</head>
+<center style="background-image: url(https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTc0MjA0MXx8ZW58MHx8fHw%3D&w=1000&q=80);">
+<body>
+  
+
+    <head>
+        <title>My page title</title>
+        <h1>New Chat Page:</h1>
+     </head>
+     <style>
+    html{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .accountbackround{
+        width: 250px;
+        height: 30px;
+        background-color: blue;
+outline: cornflowerblue;
+}
+.sizedTextarea{
+    /*For $POST Textarea*/
+    width: 530px;
+    height: 500px;
+    border: chocolate;
+    background-color: brown;
+    resize: vertical;
+
+}
+</style>
+<h3>Enter Name of page</h3>
+<br>
+<div class="accountbackround">Account: <div style="font-family: 'Courier New', Courier, monospace;"><b>ajm c</b></div></div>
+<br>
+<input type="text" required value="e.g. My Early Life" placeholder="Your Header" id="dcd">
+<br>
+<textarea class="sizedTextarea" required style="font-family: Arial, Helvetica, sans-serif;" placeholder="The body of your post" id="textcontent" contenteditable="true" >
+<br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam repudiandae aperiam quam? Ad quia totam tenetur reiciendis eius expedita optio molestias in? Tempora molestias vero libero aut eveniet unde qui!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, dignissimos! Repellendus dolorem quisquam ab? Laborum, ad architecto consectetur aspernatur explicabo perspiciatis ipsum facere necessitatibus ducimus placeat omnis esse! Odio, eveniet!
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maiores voluptatibus modi nemo deleniti nisi provident inventore laudantium voluptatum necessitatibus mollitia quia natus culpa, excepturi eligendi, tempora officia. Accusamus, tenetur?
+</textarea>
+<br>
+<p>Add Iframe:</p>
+<br>
+<input type="file" accept=".html,.htm,.webp">
+<br>
+<p>Add image / file</p>
+<br>
+
+<style>
+    #img_url {
+background: #ddd;
+width:100px;
+height: 90px;
+display: block;
+}
+</style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<br>
+<script type="text/javascript">
+        function img_pathUrl(input){
+    $('#img_url')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
+}
+
+
+</script></body>
+</body>
+<br>
+<footer>
+    <p>Live Privew</p>
+    <input type="file" id="img_file" onChange="img_pathUrl(this);" accept="image/*" >
+
+    <div class="post-section">
+        <input type="text" disabled value="ajm c" id="hideName">
+        <img src="nofiledetected-post.png" id="img_url" alt="UploadImageIcon" width="900" height="900">
+        <br>
+        <div style="width: 380px;" id="showdcd" class="priviewPostDocument"></div>
+
+        <br>
+        <br>
+        <br>
+    <div style="width: 380px;" id="showtext" class="priviewPostDocument"></div>
+<br>
+<br>
+<br>
+</div>
+</footer>
+<script>
+    var textcontent = document.getElementById('textcontent');
+
+textcontent.onkeyup = textcontent.onkeypress = function(){
+    document.getElementById('showtext').innerHTML = this.value;
+}
+var dcd = document.getElementById('dcd');
+
+textcontent.onkeyup = textcontent.onkeypress = function(){
+    document.getElementById('showdcd').innerHTML = this.value;
+}
+</script>
+<style>
+    /*Document for $previewPOST.element("".previewPostDocument, .outlinePost);*/
+    .previewPostDocument{
+        background-color: gray;
+        color: white;
+    }
+    #hideName{
+        background-color:dimgray;
+        font-weight: 700;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.55cm;
+        width:1.25cm;
+        color:black;
+        border: none;
+    }
+    .post-section{
+    /*
+    Post section defins the area of *WHERE the post will be.
+    image-section defines if there is a big image.
+    */
+    width: 500px;
+    height: 530px;
+    background-color: dimgray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: 400;
+    border-radius: 20px;
+border: gray;
+}
+.img{
+    border-radius: 5px;
+    alt: "Image";
+    background-image: url(imgdeleted.png);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    height: 2.50cm;
+    background-repeat: no-repeat;
+}
+.video{
+    border-radius: 10px;
+    width: 150cm;
+    height: 100cm;
+}
+.uname-label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.text{
+    border: dimgrey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.reply-section{
+    border: black;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.label-reply-section{
+background-color: goldenrod;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+width: 55px;
+}
+.iframe{
+  border: 0.25cm;
+  border-color:rgb(46, 43, 43);
+  border-radius: 1cm;
+  width: 10cm;
+  height:5.95cm;
+  /*
+  Only avalible to primium users.
+  $20 Per Iframe
+  */
+}
+/*END POST*/
+
+</style>
+</center>
+</html> 

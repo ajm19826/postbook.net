@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Rat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #rat-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            animation: spin 2s linear infinite;
+            cursor: pointer;
+        }
+
+        #rat {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://png.pngtree.com/png-vector/20230918/ourmid/pngtree-cute-rat-isolated-png-image_10120140.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cheese-particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            animation: cheeseAnim 0.5s ease-out;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes cheeseAnim {
+            0% {
+                transform: scale(1) translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0) translate(50px, -50px);
+                opacity: 0;
+            }
+        }
+
+        #counter {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" src="https://spinningrat.online/assets/tunes/tunes.ogg" autoplay loop>
+        Your browser does not support the audio element.
+    </audio>
+    <div id="rat-container">
+        <div id="counter">Times Rat Clicked: 0</div>
+        <div id="rat"></div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+
+        document.getElementById("rat-container").addEventListener("click", function(e) {
+            // Update click counter
+            clickCount++;
+            document.getElementById("counter").innerText = `Times Rat Clicked: ${clickCount}`;
+
+            // Create cheese particles
+            const ratRect = document.getElementById("rat-container").getBoundingClientRect();
+            const centerX = ratRect.left + ratRect.width / 2;
+            const centerY = ratRect.top + ratRect.height / 2;
+            createCheeseParticle(centerX, centerY);
+        });
+
+        function createCheeseParticle(x, y) {
+            const particle = document.createElement("div");
+            particle.classList.add("cheese-particle");
+            document.body.appendChild(particle);
+
+            // Positioning the particle
+            particle.style.left = `${x - 5}px`; // center the particle on the click point
+            particle.style.top = `${y - 5}px`;
+
+            // Animation end event listener to remove the particle
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .planner-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-slot {
+            margin-bottom: 20px;
+        }
+
+        .time-slot h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .task-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .task-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .task-buttons button {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .task-buttons button:hover {
+            background-color: #2980b9;
+        }
+
+        .task-list {
+            margin-top: 10px;
+        }
+
+        .task-item {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-item button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .task-item button:hover {
+            background-color: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Daily Planner</h1>
+
+    <div class="planner-container">
+        <div class="time-slot" id="morningSlot">
+            <h2>Morning</h2>
+            <input type="text" class="task-input" id="morningTask" placeholder="Enter morning task">
+            <div class="task-buttons">
+                <button onclick="addTask('morning')">Add Task</button>
+            </div>
+            <div class="task-list" id="morningTasks"></div>
+        </div>
+
+        <div class="time-slot" id="afternoonSlot">
+            <h2>Afternoon</h2>
+            <input type="text" class="task-input" id="afternoonTask" placeholder="Enter afternoon task">
+            <div class="task-buttons">
+                <button onclick="addTask('afternoon')">Add Task</button>
+            </div>
+            <div class="task-list" id="afternoonTasks"></div>
+        </div>
+
+        <div class="time-slot" id="eveningSlot">
+            <h2>Evening</h2>
+            <input type="text" class="task-input" id="eveningTask" placeholder="Enter evening task">
+            <div class="task-buttons">
+                <button onclick="addTask('evening')">Add Task</button>
+            </div>
+            <div class="task-list" id="eveningTasks"></div>
+        </div>
+    </div>
+
+    <script>
+        // Store tasks for different time slots
+        const tasks = {
+            morning: [],
+            afternoon: [],
+            evening: [],
+        };
+
+        // Function to render tasks
+        const renderTasks = (slot) => {
+            const taskList = document.getElementById(`${slot}Tasks`);
+            taskList.innerHTML = '';
+
+            tasks[slot].forEach((task, index) => {
+                const taskItem = document.createElement('div');
+                taskItem.classList.add('task-item');
+                taskItem.innerHTML = `
+                    <span>${task}</span>
+                    <button onclick="deleteTask('${slot}', ${index})">Delete</button>
+                `;
+                taskList.appendChild(taskItem);
+            });
+        };
+
+        // Add a task to a specific slot
+        const addTask = (slot) => {
+            const taskInput = document.getElementById(`${slot}Task`);
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                tasks[slot].push(taskText);
+                taskInput.value = '';
+                renderTasks(slot);
+            }
+        };
+
+        // Delete a task from a specific slot
+        const deleteTask = (slot, index) => {
+            tasks[slot].splice(index, 1);
+            renderTasks(slot);
+        };
+
+        // Initial render
+        renderTasks('morning');
+        renderTasks('afternoon');
+        renderTasks('evening');
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostBook Film ID Converter</title>
+    <link rel="stylesheet" type="text/css" href="helper.css">
+<script src="helper.js"></script>
+<img src="favicon-expanded.png" alt="favicon-expanded">
+<h1>PostBook Film ID Converter</h1>
+<div></div>
+<b>Upload your photo/video and we will convert your film to a <u>PRIVATE ID</u> you cannot share the video with,</b>
+<b style="color:red;">The film id can edit your own video if you are not careful, do not share, edit, or remove the film id unless you know what you are doing. For privacy, you can also give your film id an experation date.</b>
+<hr>
+</head>
+<body>
+<h2>Upload Here..</h2> 
+<input type="file" accept=".gif,.jpg,.jpeg,.png,.mp4,.mp3,.ogg,.webm,.bmp">
+<button type="submit" onclick="filmid()">Get Film ID</button>
+<hr>
+<br>
+<button onclick="document.getElementById('popup').style.display='block'">Set Exparation Date</button>
+</body>
+<h2>Set Exparation Date</h2>
+<p id="writeinput"></p>
+<button id="launchid">LAUNCH DATE</button>
+
+<script>
+    //POSTBOOK FILM ID SETUP
+function filmid() {
+    document.write(Math.floor(Math.random() * 999999999999999) + 1, "That is your new film id. DO NOT SHARE WITH ANYONE ELSE!! You can also set an expiration date on the id.")
+}
+function filmidexp() {
+    document.write(Math.floor(Math.random() * 999999999999999) + 1, "That is your new film id. DO NOT SHARE WITH ANYONE ELSE!! Expiration Date:", )
+}
+function launchid() {
+  let text;
+  let person = prompt("Please enter exparation date:", "E.G.",exd);
+  if (person == null || person == "") {
+    text = "Unable to fetch data. Please retry.";
+  } else {
+    text = "Read! Your new film id is:", filmid(), "Do not share with anyone!";
+  }
+  document.getElementById("writeinput").innerHTML = text;
+}
+const exd = new Date();
+let year = exd.getFullYear();
+</script>
+</html>

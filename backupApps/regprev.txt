@@ -1,0 +1,10 @@
+PostBook Regestry [PREVIEW 1.6]
+*LAST MODIFIED: 9/17/2021*
+____________________
+>HKEY_VER_SELECT (16BITREG): "/.//pws/security/vr/10.31.rem" [file: /admin-locked/]
+>HKEY_VM_NAME (DISPLAY): "PostBook | Social Media" [file:]
+*filedir: DISC_WEB_NAME*
+[ file:".reg16" /~/accepted
+>WEBP_STYLE_CONNECTID (16BITREG): "108368267832142252678421" [2-file: select:wpstyl1.reg16 ";" readme.reg16 ] > readme (16BITREG): "POSTBOOK ID: %3blur; \n %redtxt(DO NOT SHARE WITH OTHERS!!!); ";
+>WEBP_LOADPB (16BITREG): "/.//pws/security/!apdar/launcher.cb" [file: ]
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .weather-info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Weather App</h2>
+    <label for="location">Enter a City:</label>
+    <input type="text" id="location" placeholder="e.g., London">
+    <button onclick="getWeather()">Get Weather</button>
+    
+    <div id="weather-info" class="weather-info"></div>
+</div>
+
+<script>
+    function getWeather() {
+        const location = document.getElementById("location").value;
+
+        if (!location) {
+            alert("Please enter a city name!");
+            return;
+        }
+
+        // Make a request to wttr.in with the location
+        const weatherURL = `https://wttr.in/${location}?format=%C+%t`; // %C = condition, %t = temperature
+
+        fetch(weatherURL)
+            .then(response => response.text())
+            .then(data => {
+                // Show weather info
+                document.getElementById("weather-info").textContent = `Weather: ${data}`;
+            })
+            .catch(error => {
+                console.error("Error fetching weather data:", error);
+                document.getElementById("weather-info").textContent = "Could not fetch weather data.";
+            });
+    }
+</script>
+
+</body>
+</html>
